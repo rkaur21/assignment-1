@@ -41,7 +41,24 @@
 
     <nav class="navbar navbar-expand-lg sticky-top navbar-light px-5 secondary-header">
         <form class="navbar-brand form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" onfocus="showresult()" onblur="hideresult()">
+			<div class="search-result" id="searchbox" >
+				<span><b>Honda</b></span><br>
+				<span class="list-title">- Honda Accord</span>
+				<ul>
+					<li>Honda Accord EX</li>
+					<li>Honda Accord EX-L</li>
+					<li>Honda Accord LX</li>
+					<li>Honda Accord sport</li>
+				</ul>	
+				<span class="list-title mt-2">- Honda Accord Hybrid</span>
+				<ul>
+					<li>Honda Accord Hybrid Base</li>
+					<li>Honda Accord Hybrid EX</li>
+					<li>Honda Accord Hybrid EX-L</li>
+					<li>Honda Accord Touring</li>
+				</ul>	
+			</div>
         </form>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2"
             aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,16 +89,20 @@
             <div class="col-lg-6 col-sm-12">
                 <div class="card">
                     <div class="card-body">
-                        <div class="card-header row">
-                            <div class="col-8">
+                        <div class="row pt-0">
+                            <div class="col-10">
                                 <h5 class="card-title car-name">Infniti QX50 base, 2017</h5>
                             </div>
-                            <div class="col-4 text-right">
-                                <img src="assets/images/card-image.png" class="img img-responsive">
+                            <div class="col-2 text-right">
+                                <img src="assets/images/heart_gray.svg" class="img img-responsive heart-img">
                             </div>
                         </div>
+						<div class="row pt-8">
+							<br><br>
+						</div>
+						
                         <div class="row mt-3">
-                            <div class="price-container col-6 pb-4 mb-2">
+                            <div class="price-container col-4 mb-4">
                                 <span class="currency"><sup>$</sup></span>
                                 <span class="price">275</span>
                                 <div class="payment-scheme">
@@ -90,55 +111,436 @@
                                 <div class="time-period">
                                     Over 36 Months
                                 </div>
+                                <hr />
                             </div>
-                            <div class="col-6 car-color">
+                            <div class="col-8 car-color pl-5">
                                 <div class="w-100 my-2">
                                     <span>
                                         <svg width="65" height="35">
-                                            <rect width="65" height="35" style="fill:#ccc;stroke-width:3;stroke:rgb(0,0,0)" />
+                                            <rect width="65" height="35"
+                                                style="fill:#ccc;stroke-width:3;stroke:rgb(0,0,0)" />
                                         </svg>
                                     </span>
-                                    <span>
-                                        Exterior: <b>Metallic Silver</b>
-                                    </span>
+                                    <span class="ml-2">Exterior: Metallic Silver</span>
                                 </div>
                                 <div class="w-100 my-2">
                                     <span>
                                         <svg width="65" height="35">
-                                            <rect width="65" height="35" style="fill:#000;stroke-width:3;stroke:rgb(0,0,0)" />
+                                            <rect width="65" height="35"
+                                                style="fill:#000;stroke-width:3;stroke:rgb(0,0,0)" />
                                         </svg>
                                     </span>
-                                    <span>
-                                        Exterior: <b>Metallic Silver</b>
-                                    </span>
+                                    <span class="ml-2">Interior: Obsidian Black</span>
                                 </div>
                             </div>
-                            <div class="price-container col-6 pb-4 mb-2">
+                            <div class="price-container col-4 mb-4">
                                 <span class="currency"><sup>$</sup></span>
                                 <span class="price">1,200</span>
                                 <div class="payment-scheme">
                                     DUE AT SINGING
                                     <i class="fas fa-info-circle ml-2"></i>
                                 </div>
+                                <hr />
+                            </div>
+                            <img class="car-img img img-responsive" src="assets/images/11132_cc0640_001_KAD.png" />
+                            <div class="features-container col-12 p-5">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-6 px-4">
+                                            <div class="mt-2"><img src="assets/images/car-icons/seat.svg" />
+                                                <span class="ml-2">5 seats (bench)</span>
+                                            </div>
+                                            <div class="mt-2"><img src="assets/images/car-icons/wheel.svg" />
+                                                <span class="ml-2">18"/8" wheels</span>
+                                            </div>
+                                            <div class="mt-2"><img src="assets/images/car-icons/engine.svg" />
+                                                <span class="ml-2">6 CYL AWD</span>
+                                            </div>
+                                            <div class="mt-2"><img src="assets/images/car-icons/cargo.svg" />
+                                                <span class="ml-2">cargo space 27.1</span>
+                                            </div>
+                                            <div class="mt-2"><img src="assets/images/car-icons/transmission.svg" />
+                                                <span class="ml-2">automatic</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 px-4">
+                                            <div class="mt-2"><img src="assets/images/car-icons/door.svg" />
+                                                <span class="ml-2">4 doors</span>
+                                            </div>
+                                            <div class="mt-2"><img src="assets/images/car-icons/gps.svg" />
+                                                <span class="ml-2">GPS navigation</span>
+                                            </div>
+                                            <div class="mt-2"><img src="assets/images/car-icons/mileage.svg" />
+                                                <span class="ml-2">24/17C mileage</span>
+                                            </div>
+                                            <div class="mt-2"><img src="assets/images/car-icons/rear-view-camera.svg" />
+                                                <span class="ml-2">rear view camera</span>
+                                            </div>
+                                            <div class="mt-2"><img src="assets/images/car-icons/moon-roof.svg" />
+                                                <span class="ml-2">moon roof</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+
             <div class="col-lg-6 col-sm-12">
                 <div class="card">
                     <div class="card-body">
-                        <div class="card-header">
-                            <h5 class="card-title car-name float-left">Infniti QX50 base, 2017</h5>
-                            <img src="assets/images/card-image.png" class="img img-responsive float-right">
+                        <div class="row pt-0">
+                            <div class="col-10">
+                                <h5 class="card-title car-name">Infniti QX50 base, 2017</h5>
+                            </div>
+                            <div class="col-2 text-right">
+                                <img src="assets/images/heart_gray.svg" class="img img-responsive heart-img">
+                            </div>
+                        </div>
+						<div class="row pt-8">
+							<div class="col-2">
+								<a href="#" class="button next">Special </a>
+						   </div>
+						   <div class="col-xg">
+							<h4 class="rate"><s>$303</s></h4>
+						   </div>
+							<div class="col-5">
+							<h6 class="rate-text">Expires in 12</h6>
+						   </div>
+						</div>
+                        <div class="row mt-3">
+                            <div class="price-container col-4 mb-4">
+                                <span class="currency"><sup>$</sup></span>
+                                <span class="price">275</span>
+                                <div class="payment-scheme">
+                                    MONTHLY PAYMENT
+                                </div>
+                                <div class="time-period">
+                                    Over 36 Months
+                                </div>
+                                <hr />
+                            </div>
+                            <div class="col-8 car-color pl-5">
+                                <div class="w-100 my-2">
+                                    <span>
+                                        <svg width="65" height="35">
+                                            <rect width="65" height="35"
+                                                style="fill:#ccc;stroke-width:3;stroke:rgb(0,0,0)" />
+                                        </svg>
+                                    </span>
+                                    <span class="ml-2">Exterior: Metallic Silver</span>
+                                </div>
+                                <div class="w-100 my-2">
+                                    <span>
+                                        <svg width="65" height="35">
+                                            <rect width="65" height="35"
+                                                style="fill:#000;stroke-width:3;stroke:rgb(0,0,0)" />
+                                        </svg>
+                                    </span>
+                                    <span class="ml-2">Interior: Obsidian Black</span>
+                                </div>
+                            </div>
+                            <div class="price-container col-4 mb-4">
+                                <span class="currency"><sup>$</sup></span>
+                                <span class="price">1,200</span>
+                                <div class="payment-scheme">
+                                    DUE AT SINGING
+                                    <i class="fas fa-info-circle ml-2"></i>
+                                </div>
+                                <hr />
+                            </div>
+                            <img class="car-img img img-responsive" src="assets/images/11132_cc0640_001_QAB.png" />
+                            <div class="features-container col-12 p-5">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-6 px-4">
+                                            <div class="mt-2"><img src="assets/images/car-icons/seat.svg" />
+                                                <span class="ml-2">5 seats (bench)</span>
+                                            </div>
+                                            <div class="mt-2"><img src="assets/images/car-icons/wheel.svg" />
+                                                <span class="ml-2">18"/8" wheels</span>
+                                            </div>
+                                            <div class="mt-2"><img src="assets/images/car-icons/engine.svg" />
+                                                <span class="ml-2">6 CYL AWD</span>
+                                            </div>
+                                            <div class="mt-2"><img src="assets/images/car-icons/cargo.svg" />
+                                                <span class="ml-2">cargo space 27.1</span>
+                                            </div>
+                                            <div class="mt-2"><img src="assets/images/car-icons/transmission.svg" />
+                                                <span class="ml-2">automatic</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 px-4">
+                                            <div class="mt-2"><img src="assets/images/car-icons/door.svg" />
+                                                <span class="ml-2">4 doors</span>
+                                            </div>
+                                            <div class="mt-2"><img src="assets/images/car-icons/gps.svg" />
+                                                <span class="ml-2">GPS navigation</span>
+                                            </div>
+                                            <div class="mt-2"><img src="assets/images/car-icons/mileage.svg" />
+                                                <span class="ml-2">24/17C mileage</span>
+                                            </div>
+                                            <div class="mt-2"><img src="assets/images/car-icons/rear-view-camera.svg" />
+                                                <span class="ml-2">rear view camera</span>
+                                            </div>
+                                            <div class="mt-2"><img src="assets/images/car-icons/moon-roof.svg" />
+                                                <span class="ml-2">moon roof</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+
+
         </div>
     </div>
+	
+	<div class="main-content container-fluid mt-5">
+        <div class="row">
+            <div class="col-lg-6 col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row pt-0">
+                            <div class="col-10">
+                                <h5 class="card-title car-name">Infniti QX50 base, 2017</h5>
+                            </div>
+                            <div class="col-2 text-right">
+                                <img src="assets/images/heart_gray.svg" class="img img-responsive heart-img">
+                            </div>
+                        </div>
+						<div class="row mt-3">
+                            <div class="price-container col-4 mb-4">
+                                <span class="currency"><sup>$</sup></span>
+                                <span class="price">275</span>
+                                <div class="payment-scheme">
+                                    MONTHLY PAYMENT
+                                </div>
+                                <div class="time-period">
+                                    Over 36 Months
+                                </div>
+                                <hr />
+                            </div>
+                            <div class="col-8 car-color pl-5">
+                                <div class="w-100 my-2">
+                                    <span>
+                                        <svg width="65" height="35">
+                                            <rect width="65" height="35"
+                                                style="fill:#ccc;stroke-width:3;stroke:rgb(0,0,0)" />
+                                        </svg>
+                                    </span>
+                                    <span class="ml-2">Exterior: Metallic Silver</span>
+                                </div>
+                                <div class="w-100 my-2">
+                                    <span>
+                                        <svg width="65" height="35">
+                                            <rect width="65" height="35"
+                                                style="fill:#000;stroke-width:3;stroke:rgb(0,0,0)" />
+                                        </svg>
+                                    </span>
+                                    <span class="ml-2">Interior: Obsidian Black</span>
+                                </div>
+                            </div>
+                            <div class="price-container col-4 mb-4">
+                                <span class="currency"><sup>$</sup></span>
+                                <span class="price">1,200</span>
+                                <div class="payment-scheme">
+                                    DUE AT SINGING
+                                    <i class="fas fa-info-circle ml-2"></i>
+                                </div>
+                                <hr />
+                            </div>
+                            <img class="car-img img img-responsive" src="assets/images/11132_cc0640_001_KAD.png" />
+                            <div class="features-container col-12 p-5">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-6 px-4">
+                                            <div class="mt-2"><img src="assets/images/car-icons/seat.svg" />
+                                                <span class="ml-2">5 seats (bench)</span>
+                                            </div>
+                                            <div class="mt-2"><img src="assets/images/car-icons/wheel.svg" />
+                                                <span class="ml-2">18"/8" wheels</span>
+                                            </div>
+                                            <div class="mt-2"><img src="assets/images/car-icons/engine.svg" />
+                                                <span class="ml-2">6 CYL AWD</span>
+                                            </div>
+                                            <div class="mt-2"><img src="assets/images/car-icons/cargo.svg" />
+                                                <span class="ml-2">cargo space 27.1</span>
+                                            </div>
+                                            <div class="mt-2"><img src="assets/images/car-icons/transmission.svg" />
+                                                <span class="ml-2">automatic</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 px-4">
+                                            <div class="mt-2"><img src="assets/images/car-icons/door.svg" />
+                                                <span class="ml-2">4 doors</span>
+                                            </div>
+                                            <div class="mt-2"><img src="assets/images/car-icons/gps.svg" />
+                                                <span class="ml-2">GPS navigation</span>
+                                            </div>
+                                            <div class="mt-2"><img src="assets/images/car-icons/mileage.svg" />
+                                                <span class="ml-2">24/17C mileage</span>
+                                            </div>
+                                            <div class="mt-2"><img src="assets/images/car-icons/rear-view-camera.svg" />
+                                                <span class="ml-2">rear view camera</span>
+                                            </div>
+                                            <div class="mt-2"><img src="assets/images/car-icons/moon-roof.svg" />
+                                                <span class="ml-2">moon roof</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <script src="assets/js/index.js" crossorigin="anonymous"></script>
+
+            <div class="col-lg-6 col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row pt-0">
+                            <div class="col-10">
+                                <h5 class="card-title car-name">Infniti QX50 base, 2017</h5>
+                            </div>
+                            <div class="col-2 text-right">
+                                <img src="assets/images/heart_gray.svg" class="img img-responsive heart-img">
+                            </div>
+                        </div>
+						 
+                        <div class="row mt-3">
+							<div class="price-container col-6 mb-4">
+								<h6 class="price-text">Sorry, the vehicle is no longer available</h6><br>
+								<button type="button" class="btn btn-primary btn-round-lg btn-lg"> VIEW SIMILAR </button>
+								<div class="blank-space"> 
+							
+								</div>
+							</div>
+							
+                            
+                            <img class="car-img img img-responsive" src="assets/images/11132_cc0640_001_QAB.png" />
+                            <div class="features-container col-12 p-5">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-6 px-4">
+                                            <div class="mt-2"><img src="assets/images/car-icons/seat.svg" />
+                                                <span class="ml-2">5 seats (bench)</span>
+                                            </div>
+                                            <div class="mt-2"><img src="assets/images/car-icons/wheel.svg" />
+                                                <span class="ml-2">18"/8" wheels</span>
+                                            </div>
+                                            <div class="mt-2"><img src="assets/images/car-icons/engine.svg" />
+                                                <span class="ml-2">6 CYL AWD</span>
+                                            </div>
+                                            <div class="mt-2"><img src="assets/images/car-icons/cargo.svg" />
+                                                <span class="ml-2">cargo space 27.1</span>
+                                            </div>
+                                            <div class="mt-2"><img src="assets/images/car-icons/transmission.svg" />
+                                                <span class="ml-2">automatic</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 px-4">
+                                            <div class="mt-2"><img src="assets/images/car-icons/door.svg" />
+                                                <span class="ml-2">4 doors</span>
+                                            </div>
+                                            <div class="mt-2"><img src="assets/images/car-icons/gps.svg" />
+                                                <span class="ml-2">GPS navigation</span>
+                                            </div>
+                                            <div class="mt-2"><img src="assets/images/car-icons/mileage.svg" />
+                                                <span class="ml-2">24/17C mileage</span>
+                                            </div>
+                                            <div class="mt-2"><img src="assets/images/car-icons/rear-view-camera.svg" />
+                                                <span class="ml-2">rear view camera</span>
+                                            </div>
+                                            <div class="mt-2"><img src="assets/images/car-icons/moon-roof.svg" />
+                                                <span class="ml-2">moon roof</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+    </div>
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row px-5 pt-5 mx-3">
+                <div class="footer-left">
+                    <div class="row">
+                        <div class="col">
+                            <span class="font-weight-bold float-left">INFO</span><br />
+                            <span>About</span><br />
+                            <span>FAQ</span><br />
+                            <span>How it works</span>
+                        </div>
+                        <div class="col">
+                            <br /><span>Blog</span><br />
+                            <span>Press</span><br />
+                        </div>
+                        <div class="col">
+                            <br /><span>Terms of use</span><br />
+                            <span>Privacy policy</span><br />
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-center">
+                    <span class="font-weight-bold text-center">CONTACT</span><br />
+                    <span class="footer-link">212-ONPOINT</span>
+                </div>
+                <div class="footer-right">
+                    <div class="row">
+                        <div class="col-5">
+                            <br /><span>email us: </span><span class="footer-link">info@onpoint.com</span><br />
+                            <span>join our deal network:</span><br />
+                            <span class="footer-link">desboard@onpoint.com</span>
+                        </div>
+                        <div class="col-7">
+                            <br />
+                            <div class="row">
+                                <div class="col-3">
+                                    <img src="assets/images/fb.svg" class="foot-img">
+                                </div>
+                                <div class="col-3">
+                                    <img src="assets/images/twitter.svg" class="foot-img">
+                                </div>
+                                <div class="col-3">
+                                    <img src="assets/images/insta.svg" class="foot-img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 text-center mt-4 p-3">
+                    @ 2018 On point.All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+<script>
+
+
+function showresult(){
+document.getElementById("searchbox").style.display="block";
+}
+
+function hideresult(){
+document.getElementById("searchbox").style.display="none";
+}
+</script>   
+
+ <script src="assets/js/index.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
