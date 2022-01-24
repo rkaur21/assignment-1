@@ -1,0 +1,102 @@
+.main-header {
+    background-color: #3fcbff !important;
+    color: #fff;
+}
+
+.navbar-brand .main-brand {
+    color: #fff;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.navbar-brand .sub-brand {
+    color: #fff;
+    font-size: 20px;
+    margin-top: -15px;
+}
+
+.main-header .dropdown-left {
+    font-size: 25px;
+}
+
+.main-header .dropdown-left::after {
+    display: inline-block;
+    margin-left: .255em;
+    vertical-align: .155em;
+    content: "";
+    border-top: 0.4em solid;
+    border-right: 0.4em solid transparent;
+    border-bottom: 0;
+    border-left: 0.4em solid transparent;
+}
+
+.header-center-section {
+    font-size: 20px;
+}
+
+.secondary-header {
+    background-color: #007bad;
+}
+
+.secondary-header .secondary-header-text {
+    font-size: 25px;
+}
+
+.car-name {
+    color: #007bad;
+    font-size: 30px;
+}
+
+.car-container {
+    border-width: 2px;
+}
+
+.card-header {
+    background-color: transparent !important;
+    border: none;
+}
+
+.card-header > img {
+    margin-top: -10px;
+}
+
+.card {
+    border: none;
+    border-radius: 0;
+    border-top: 2px solid rgba(0,0,0,.125);
+    border-bottom: 2px solid rgba(0,0,0,.125);
+}
+
+.car-color {
+    color: #aaa;
+    font-size: 20px;
+}
+
+.price-container {
+    color: #666;
+    border-bottom: 2px solid #ddd;
+}
+.currency {
+    font-size: 35px;
+    font-weight: bolder;
+}
+
+.price {
+    font-size: 45px;
+    font-weight: bolder;
+}
+
+.payment-scheme {
+    color: #888;
+    font-size: 20px;
+}
+
+.time-period {
+    color: #888;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.payment-scheme i {
+    font-size: 25px;
+}
